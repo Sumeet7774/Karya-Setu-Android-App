@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "998294348932",
+    "project_id": "karyasetu-61e7a",
+    "storage_bucket": "karyasetu-61e7a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998294348932:android:8ea00e5b15ed65c11b8ed1",
+        "android_client_info": {
+          "package_name": "com.example.karyasetu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATv5DMLrmPJU0Eo6ugl1tpYrzPyvnoOLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
