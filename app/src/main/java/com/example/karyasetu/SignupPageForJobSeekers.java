@@ -21,7 +21,7 @@ import www.sanju.motiontoast.MotionToastStyle;
 
 public class SignupPageForJobSeekers extends AppCompatActivity {
 
-    Button backButtonForJobSeekers, signupButtonForJobSeekers;
+    Button backBtn_job, signupBtn_job;
     EditText firstNameEdittext,lastNameEdittext,emailAddressEdittext,passwordEdittext;
 
     @Override
@@ -30,14 +30,14 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup_page_for_job_seekers);
 
-        backButtonForJobSeekers = findViewById(R.id.back_button_signuppage_job);
+        backBtn_job = findViewById(R.id.back_button_signuppage_job);
         firstNameEdittext = findViewById(R.id.firstname_edittext_signuppage_job);
         lastNameEdittext = findViewById(R.id.lastname_edittext_signuppage_job);
         emailAddressEdittext = findViewById(R.id.email_edittext_signuppage_job);
         passwordEdittext = findViewById(R.id.password_edittext_signuppage_job);
-        signupButtonForJobSeekers = findViewById(R.id.signup_button_signuppage_job);
+        signupBtn_job = findViewById(R.id.signup_button_signuppage_job);
 
-        backButtonForJobSeekers.setOnClickListener(new View.OnClickListener() {
+        backBtn_job.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SignupPageForJobSeekers.this, IndexPageForSignup.class);
@@ -76,7 +76,7 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
         emailAddressEdittext.setFilters(new InputFilter[]{noSpacesFilter});
         passwordEdittext.setFilters(new InputFilter[]{noSpacesFilter});
 
-        signupButtonForJobSeekers.setOnClickListener(new View.OnClickListener() {
+        signupBtn_job.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String firstname_txt = firstNameEdittext.getText().toString().trim();
@@ -131,7 +131,10 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
                 }
                 else
                 {
-                    //registerUser(firstname_txt,lastname_txt,email_txt,password_txt);
+                    Intent intent = new Intent(SignupPageForJobSeekers.this, IndexPageForLogin.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
                 }
             }
         });
