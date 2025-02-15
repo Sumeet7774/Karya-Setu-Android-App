@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#EEEEEE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IndexPageForSignup">
+
+    <Button
+        android:id="@+id/back_button_signuppage"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/ic_arrow_back_black"
+        android:backgroundTint="@color/black"
+        android:tint="#000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="5dp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loginAnimationView_indexpage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        app:lottie_rawRes="@raw/signup_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/signup_for_jobseekers_button_signuppage"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Signup For Job Seekers"
+        android:background="@drawable/rounded_button"
+        android:textColor="#EEEEEE"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/loginAnimationView_indexpage"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_65sdp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/signup_for_employeers_button_indexpage"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Signup For Employers"
+        android:background="@drawable/rounded_button"
+        android:textColor="#EEEEEE"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/signup_for_jobseekers_button_signuppage"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_65sdp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/ellipse1_indexpage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:src="@drawable/ellipse1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ellipse2_indexpage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:src="@drawable/ellipse2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ellipse3_indexpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ellipse1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ellipse4_indexpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ellipse2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
