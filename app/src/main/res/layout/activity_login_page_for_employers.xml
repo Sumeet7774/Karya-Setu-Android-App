@@ -66,6 +66,18 @@
                 android:layout_below="@id/loginpage1_top_heading"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/employer"
+                android:textColor="#000000"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/loginpage3_top_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loginpage2_top_heading"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="@string/login_heading2"
                 android:textColor="#000000"
                 android:textSize="@dimen/_20sdp"

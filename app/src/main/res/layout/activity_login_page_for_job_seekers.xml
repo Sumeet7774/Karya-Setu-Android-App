@@ -66,6 +66,18 @@
                 android:layout_below="@id/loginpage1_top_heading"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/job_seeker"
+                android:textColor="#000000"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/loginpage3_top_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loginpage2_top_heading"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="@string/login_heading2"
                 android:textColor="#000000"
                 android:textSize="@dimen/_20sdp"
@@ -90,25 +102,6 @@
                     android:id="@+id/email_edittext_loginpage_job"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
-                    android:fontFamily="@font/poppins_light"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="@dimen/_9sdp"
-                    android:paddingStart="@dimen/_7sdp"
-                    android:paddingEnd="@dimen/_7sdp"
-                    android:textSize="@dimen/_14sdp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password_edittext_loginpage_job"
-                    android:hint="@string/password"
-                    android:inputType="textPassword"
                     android:fontFamily="@font/poppins_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -7,11 +7,11 @@
     <string name="index_heading1">HELLO THERE,</string>
     <string name="index_heading2">WELCOME</string>
 
-    <string name="signup_heading1">Hello,</string>
+    <string name="signup_heading1">Hello</string>
     <string name="signup_heading2">Please Sign</string>
     <string name="signup_heading3">Up</string>
 
-    <string name="login_heading1">Hello,</string>
+    <string name="login_heading1">Hello</string>
     <string name="login_heading2">Please Login</string>
 
     <string name="email">Email</string>
@@ -19,4 +19,8 @@
 
     <string name="success_title_dialogbox">Success!</string>
     <string name="success_dialogbox_text">Registration Successful!</string>
+    <string name="job_seeker">Job Seeker,</string>
+    <string name="job_seeker_signup">Job Seeker,</string>
+
+    <string name="employer">Employer,</string>
 </resources>
