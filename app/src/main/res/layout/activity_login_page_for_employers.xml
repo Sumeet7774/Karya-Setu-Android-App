@@ -111,25 +111,6 @@
                     android:textSize="@dimen/_14sdp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password_edittext_loginpage_emp"
-                    android:hint="@string/password"
-                    android:inputType="textPassword"
-                    android:fontFamily="@font/poppins_light"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="@dimen/_9sdp"
-                    android:paddingStart="@dimen/_7sdp"
-                    android:paddingEnd="@dimen/_7sdp"
-                    android:textSize="@dimen/_14sdp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
             <Button
                 android:id="@+id/login_button_loginpage_emp"
                 android:fontFamily="@font/poppins_bold"
