@@ -16,4 +16,7 @@
 
     <string name="email">Email</string>
     <string name="password">Password</string>
+
+    <string name="success_title_dialogbox">Success!</string>
+    <string name="success_dialogbox_text">Registration Successful!</string>
 </resources>

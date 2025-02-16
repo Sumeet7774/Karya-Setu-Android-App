@@ -1,5 +1,6 @@
 package com.example.karyasetu;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -10,11 +11,20 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import www.sanju.motiontoast.MotionToast;
 import www.sanju.motiontoast.MotionToastStyle;
@@ -23,12 +33,15 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
 
     Button backBtn_job, signupBtn_job;
     EditText firstNameEdittext,lastNameEdittext,emailAddressEdittext,passwordEdittext;
+    FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup_page_for_job_seekers);
+
+        firestore = FirebaseFirestore.getInstance();
 
         backBtn_job = findViewById(R.id.back_button_signuppage_job);
         firstNameEdittext = findViewById(R.id.firstname_edittext_signuppage_job);
@@ -131,13 +144,50 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent intent = new Intent(SignupPageForJobSeekers.this, IndexPageForLogin.class);
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
+                    checkIfEmailExists(email_txt, firstname_txt, lastname_txt);
                 }
             }
         });
+    }
+
+    private void checkIfEmailExists(String email, String firstname, String lastname) {
+        firestore.collection("users")
+                .whereEqualTo("email", email)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots ->
+                {
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        showToast("Error", "Email already registered. Please use another email.", MotionToastStyle.ERROR);
+                    }
+                    else
+                    {
+                        registerUserInFirestore(firstname, lastname, email);
+                    }
+                })
+                .addOnFailureListener(e -> showToast("Error", "Failed to check email: " + e.getMessage(), MotionToastStyle.ERROR));
+    }
+
+    private void registerUserInFirestore(String firstname, String lastname, String email) {
+        Map<String, Object> user = new HashMap<>();
+        user.put("firstName", firstname);
+        user.put("lastName", lastname);
+        user.put("email", email);
+        user.put("role", "job_seeker");
+
+        firestore.collection("users")
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        showRegistrationSuccessDialog();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        showToast("Error", "Signup Failed", MotionToastStyle.ERROR);
+                    }
+                });
     }
 
     private boolean isValidFirstname(String firstname) {
@@ -159,5 +209,38 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
         }
         String passwordPattern = "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$";
         return password.matches(passwordPattern);
+    }
+
+    private void showToast(String title, String message, MotionToastStyle style) {
+        MotionToast.Companion.createColorToast(this,
+                title, message, style,
+                MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION,
+                ResourcesCompat.getFont(this, R.font.montserrat_semibold));
+    }
+
+    private void showRegistrationSuccessDialog()
+    {
+        Dialog successful_registration_dialogBox = new Dialog(SignupPageForJobSeekers.this);
+        successful_registration_dialogBox.setContentView(R.layout.custom_success_dialogbox);
+        Button dialogBox_ok_button = successful_registration_dialogBox.findViewById(R.id.okbutton_successDialogBox);
+        dialogBox_ok_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                successful_registration_dialogBox.dismiss();
+                Intent intent = new Intent(SignupPageForJobSeekers.this, IndexPage.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+            }
+        });
+        successful_registration_dialogBox.show();
+
+        MotionToast.Companion.createColorToast(SignupPageForJobSeekers.this,
+                "Success", "Press OK to redirect to the Index Page for login.",
+                MotionToastStyle.SUCCESS,
+                MotionToast.GRAVITY_BOTTOM,
+                MotionToast.LONG_DURATION,
+                ResourcesCompat.getFont(SignupPageForJobSeekers.this, R.font.montserrat_semibold));
     }
 }
