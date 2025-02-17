@@ -21,6 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -218,18 +219,30 @@ public class SignupPageForEmployers extends AppCompatActivity {
         firestore.collection("users")
                 .whereEqualTo("email", email)
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots ->
-                {
+                .addOnSuccessListener(queryDocumentSnapshots -> {
                     if (!queryDocumentSnapshots.isEmpty()) {
-                        showToast("Error", "Email already registered. Please use another email.", MotionToastStyle.ERROR);
-                    }
-                    else
-                    {
+                        // Check if the email is already registered with an employer role
+                        boolean isEmployer = false;
+                        for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                            String role = document.getString("role");
+                            if ("employer".equals(role)) {
+                                isEmployer = true;
+                                break;
+                            }
+                        }
+
+                        if (isEmployer) {
+                            showToast("Error", "Email already registered as an Employer. Please use another email.", MotionToastStyle.ERROR);
+                        } else {
+                            showToast("Error", "Email already registered with another role.", MotionToastStyle.ERROR);
+                        }
+                    } else {
                         registerUserInFirestore(companyName, companyDesc, phoneNumber, email);
                     }
                 })
                 .addOnFailureListener(e -> showToast("Error", "Failed to check email: " + e.getMessage(), MotionToastStyle.ERROR));
     }
+
 
     private void registerUserInFirestore(String companyName, String companyDesc, String phoneNumber ,String email) {
         Map<String, Object> user = new HashMap<>();

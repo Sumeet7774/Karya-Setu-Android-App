@@ -21,6 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -154,19 +155,30 @@ public class SignupPageForJobSeekers extends AppCompatActivity {
         firestore.collection("users")
                 .whereEqualTo("email", email)
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots ->
-                {
+                .addOnSuccessListener(queryDocumentSnapshots -> {
                     if (!queryDocumentSnapshots.isEmpty()) {
-                        showToast("Error", "Email already registered. Please use another email.", MotionToastStyle.ERROR);
-                    }
-                    else
-                    {
+                        // Check if the existing email belongs to a job_seeker
+                        boolean isJobSeeker = false;
+                        for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                            String role = document.getString("role");
+                            if ("job_seeker".equals(role)) {
+                                isJobSeeker = true;
+                                break;
+                            }
+                        }
+
+                        if (isJobSeeker) {
+                            showToast("Error", "Email already registered as Job Seeker", MotionToastStyle.ERROR);
+                        } else {
+                            showToast("Error", "Email already registered with another role.", MotionToastStyle.ERROR);
+                        }
+                    } else {
                         registerUserInFirestore(firstname, lastname, email);
                     }
                 })
                 .addOnFailureListener(e -> showToast("Error", "Failed to check email: " + e.getMessage(), MotionToastStyle.ERROR));
     }
-
+    
     private void registerUserInFirestore(String firstname, String lastname, String email) {
         Map<String, Object> user = new HashMap<>();
         user.put("firstName", firstname);

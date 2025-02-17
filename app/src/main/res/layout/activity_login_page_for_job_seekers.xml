@@ -92,39 +92,19 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginHorizontal="@dimen/_12sdp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email_edittext_loginpage_job"
-                    android:hint="@string/email"
-                    android:inputType="textEmailAddress"
-                    android:fontFamily="@font/poppins_light"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="@dimen/_9sdp"
-                    android:paddingStart="@dimen/_7sdp"
-                    android:paddingEnd="@dimen/_7sdp"
-                    android:textSize="@dimen/_14sdp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
             <Button
-                android:id="@+id/login_button_loginpage_job"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/login"
-                android:background="@drawable/rounded_button"
-                android:textColor="#EEEEEE"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold"
+                android:id="@+id/google_login_button_job"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:text="@string/login_with_google"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="@dimen/_15sdp"
+                android:drawableStart="@drawable/ic_google"
                 android:layout_marginTop="@dimen/_25sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_10sdp" />
+                android:padding="10dp"
+                android:elevation="5dp"/>
 
         </LinearLayout>
     </LinearLayout>

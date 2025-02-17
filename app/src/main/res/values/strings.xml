@@ -23,4 +23,9 @@
     <string name="job_seeker_signup">Job Seeker,</string>
 
     <string name="employer">Employer,</string>
+    <string name="login_for_job_seekers">Login For Job Seekers</string>
+    <string name="login_for_employers">Login For Employers</string>
+    <string name="login_with_google">Login with Google</string>
+
+    <string name="client_id">998294348932-u1ct0t0h9jhm0vse8bbtm8kiocedpl2h.apps.googleusercontent.com</string>
 </resources>
