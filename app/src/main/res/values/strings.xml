@@ -32,6 +32,21 @@
     <string name="my_job_posts">My Job Posts</string>
     <string name="applicants">Applicants</string>
     <string name="profile">Profile</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="view_and_update_profile">View &amp; Update Profile Details</string>
+    <string name="fullname_profilepage">Full Name</string>
+    <string name="profile_toolbar">Profile</string>
+    <string name="delete_user">Delete User</string>
+    <string name="log_out">Log Out</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_and_update_work_experience">View &amp; Update Work Experience</string>
+    <string name="view_and_update_professional_profile">View &amp; Update Professional Profile</string>
+    <string name="view_and_manage_job_listings">View &amp; Manage Job Listings</string>
+    <string name="view_amp_manage_applications"><![CDATA[View & Manage Applications]]></string>
+    <string name="view_and_update_company_details">View &amp; Update Company Details</string>
+    <string name="view_short_listed_applicants">View Short-Listed Applicants</string>
+    <string name="company_name">Company Name</string>
+    <string name="delete_account">Delete Account</string>
 </resources>
