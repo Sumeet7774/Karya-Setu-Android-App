@@ -49,4 +49,13 @@
     <string name="view_short_listed_applicants">View Short-Listed Applicants</string>
     <string name="company_name">Company Name</string>
     <string name="delete_account">Delete Account</string>
+    <string name="home_toolbar">Home</string>
+    <string name="no_job_listing_found">No Job Listing Found</string>
+    <string name="welcome_employer">Welcome, Employer!</string>
+    <string name="home_emp">Home</string>
+    <string name="total_applications">Total Applications</string>
+    <string name="active_job_listings_emp">Active Job Listings</string>
+    <string name="interviews_scheduled">Interviews Scheduled</string>
+    <string name="recent_applications">Recent Applications</string>
+    <string name="no_recent_applications_were_found">No recent applications were found</string>
 </resources>
