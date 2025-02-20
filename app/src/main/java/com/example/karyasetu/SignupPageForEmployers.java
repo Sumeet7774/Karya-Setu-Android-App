@@ -237,7 +237,8 @@ public class SignupPageForEmployers extends AppCompatActivity {
                             showToast("Error", "Email already registered with another role.", MotionToastStyle.ERROR);
                         }
                     } else {
-                        registerUserInFirestore(companyName, companyDesc, phoneNumber, email);
+                        String phone_number = "+91"+phoneNumber;
+                        registerUserInFirestore(companyName, companyDesc, phone_number, email);
                     }
                 })
                 .addOnFailureListener(e -> showToast("Error", "Failed to check email: " + e.getMessage(), MotionToastStyle.ERROR));

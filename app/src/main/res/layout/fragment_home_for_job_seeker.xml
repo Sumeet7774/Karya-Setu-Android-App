@@ -33,7 +33,7 @@
         android:layout_below="@id/toolbar" />
 
     <ProgressBar
-        android:id="@+id/progressBarLoading__home_job"
+        android:id="@+id/progressBarLoading_home_job"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -44,9 +44,10 @@
         android:id="@+id/nojoblistingsfound_textview_home_job"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins_bold"
         android:visibility="gone"
+        android:textSize="@dimen/_25sdp"
         android:text="@string/no_job_listing_found" />
 
     <FrameLayout

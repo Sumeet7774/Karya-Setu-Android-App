@@ -164,47 +164,11 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardAppliedjobs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardUpdateWorkExperience"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_25sdp"
-                android:clickable="false"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:elevation="@dimen/_5sdp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/appliedjobs_textview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View Applied Jobs"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:textSize="@dimen/_18sdp"
-                        android:padding="@dimen/_15sdp"
-                        android:layout_centerVertical="true" />
-
-                    <ImageButton
-                        android:id="@+id/appliedjobs_rightbutton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/right_button_24px" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
             <RelativeLayout
                 android:id="@+id/button_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cardAppliedjobs"
+                android:layout_below="@id/cardUpdateWorkExperience"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_centerHorizontal="true"
                 android:padding="10dp">

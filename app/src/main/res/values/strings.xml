@@ -58,4 +58,11 @@
     <string name="interviews_scheduled">Interviews Scheduled</string>
     <string name="recent_applications">Recent Applications</string>
     <string name="no_recent_applications_were_found">No recent applications were found</string>
+    <string name="no_jobs_found">No Jobs Found</string>
+    <string name="job_listings">Job Listings</string>
+    <string name="filter_jobs">Filter Jobs</string>
+    <string name="location">Location</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="applications">Applications</string>
+    <string name="no_jobs_applied_yet">No Jobs Applied Yet</string>
 </resources>
