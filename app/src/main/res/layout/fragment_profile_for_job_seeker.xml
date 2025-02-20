@@ -46,8 +46,8 @@
                 android:scaleType="centerCrop" />
 
             <TextView
-                android:id="@+id/fullname_textview_profile"
-                android:text="@string/fullname_profilepage"
+                android:id="@+id/firstname_textview_profile"
+                android:text="@string/firstname_profilepage"
                 android:textSize="@dimen/_20sdp"
                 android:fontFamily="@font/montserrat_semibold"
                 android:layout_centerHorizontal="true"
@@ -60,7 +60,7 @@
                 android:id="@+id/cardUpdateProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/fullname_textview_profile"
+                android:layout_below="@id/firstname_textview_profile"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:clickable="false"

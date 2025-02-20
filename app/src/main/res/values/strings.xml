@@ -34,7 +34,7 @@
     <string name="profile">Profile</string>
 
     <string name="view_and_update_profile">View &amp; Update Profile Details</string>
-    <string name="fullname_profilepage">Full Name</string>
+    <string name="firstname_profilepage">First Name</string>
     <string name="profile_toolbar">Profile</string>
     <string name="delete_user">Delete User</string>
     <string name="log_out">Log Out</string>
