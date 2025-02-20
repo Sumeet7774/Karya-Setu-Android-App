@@ -69,4 +69,8 @@
     <string name="no_jobs_posted_yet">No Jobs Posted Yet</string>
     <string name="no_applicants_found_yet">No Applicants Found Yet</string>
     <string name="applicants_emp">Applicants</string>
+    <string name="hired_candidates">Hired Candidates</string>
+    <string name="total_applications_emp">Total Applications</string>
+    <string name="active_job_listings">Active Job Listings</string>
+    <string name="welcome_employer_emp">Welcome, Employer!</string>
 </resources>

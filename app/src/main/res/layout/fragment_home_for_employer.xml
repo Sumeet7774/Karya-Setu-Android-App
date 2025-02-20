@@ -41,7 +41,7 @@
                 android:id="@+id/welcome_text_home_emp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome, Employer!"
+                android:text="@string/welcome_employer_emp"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -80,7 +80,7 @@
                             android:textStyle="bold"/>
 
                         <TextView
-                            android:text="Active Job Listings"
+                            android:text="@string/active_job_listings"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_semibold"
@@ -113,7 +113,7 @@
                             android:textStyle="bold"/>
 
                         <TextView
-                            android:text="Total Applications"
+                            android:text="@string/total_applications_emp"
                             android:fontFamily="@font/montserrat_semibold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -187,7 +187,7 @@
                             android:textStyle="bold"/>
 
                         <TextView
-                            android:text="Hired Candidates"
+                            android:text="@string/hired_candidates"
                             android:fontFamily="@font/montserrat_semibold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
