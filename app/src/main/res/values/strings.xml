@@ -73,4 +73,10 @@
     <string name="total_applications_emp">Total Applications</string>
     <string name="active_job_listings">Active Job Listings</string>
     <string name="welcome_employer_emp">Welcome, Employer!</string>
+    <string name="full_name">Full Name</string>
+    <string name="job_title">Job Title</string>
+    <string name="company_name_emp">Company Name</string>
+    <string name="salary">Salary</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 </resources>

@@ -15,6 +15,18 @@
         android:theme="@style/Theme.KaryaSetu"
         tools:targetApi="31">
         <activity
+            android:name=".JobPostDetailsViewPageEmp"
+            android:exported="false" />
+        <activity
+            android:name=".JobPostsEditPage"
+            android:exported="false" />
+        <activity
+            android:name=".AddJobPostsEmployer"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAndUpdateProfileDetailsJobSeeker"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreenForEmployers"
             android:exported="false" />
         <activity

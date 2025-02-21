@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#EEEEEE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddJobPostsEmployer"
+    android:padding="@dimen/_16sdp">
+
+    <Button
+        android:id="@+id/back_button_addjobposts_emp"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/ic_arrow_back_black"
+        android:backgroundTint="@color/black"
+        android:tint="#000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="5dp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/job_title_addjobposts_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Job Title"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/back_button_addjobposts_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/companyname_addjobposts_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Company Name"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/job_title_addjobposts_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/job_salary_addjobposts_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salary"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
+        android:inputType="number"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/companyname_addjobposts_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/job_description_addjobposts_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Job Description"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:maxLines="8"
+        android:maxLength="1000"
+        app:layout_constraintTop_toBottomOf="@id/job_salary_addjobposts_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/addjobposts_state_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="State"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/job_description_addjobposts_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/addjobposts_district_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="District"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/addjobposts_state_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <Button
+        android:id="@+id/addjobposts_submit_button_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Job"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:background="@drawable/blue_button_background"
+        android:paddingVertical="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/addjobposts_district_emp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,6 +46,6 @@ dependencies {
     implementation libs.motiontoast
 
     implementation(libs.firebase.auth)
-    implementation(platform(libs.firebase.bom))
+    implementation platform(libs.firebase.bom)
     implementation(libs.play.services.auth)
 }
